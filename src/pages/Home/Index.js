@@ -26,8 +26,8 @@ const Index = () => {
       domingo: 100.80
     },
     restante: 0,
-    meta_2: 9.83,
-    meta_3: 5.52,
+    meta_1: 9.83,
+    meta_2: 5.52,
   };
 
   const calculateExpense = (kmTraveled) => {
@@ -67,8 +67,8 @@ const Index = () => {
       grossSalary = parseFloat((goals.salario.domingo / (1 - percentageExpense)).toFixed(2));
     } else {
       grossSalary = parseFloat((goals.salario.segunda / (1 - percentageExpense)).toFixed(2));
-      grossSecondGoal = parseFloat((goals.meta_2 / (1 - percentageExpense)).toFixed(2));
-      grossThirdGoal = parseFloat((goals.meta_3 / (1 - percentageExpense)).toFixed(2));
+      grossSecondGoal = parseFloat((goals.meta_1 / (1 - percentageExpense)).toFixed(2));
+      grossThirdGoal = parseFloat((goals.meta_2 / (1 - percentageExpense)).toFixed(2));
     }
 
     // Separate goals
@@ -113,8 +113,8 @@ const Index = () => {
   return (
     <div>
       <h1>Salário: {salaryGoal}</h1>
-      <h1>Meta 2: {secondGoal}</h1>
-      <h1>Meta 3: {thirdGoal}</h1>
+      <h1>Meta 1: {secondGoal}</h1>
+      <h1>Meta 2: {thirdGoal}</h1>
       <h1>Restante: {remaining}</h1>
       <Form addInput={addInput} />
       <Table tableData={tableData} totalGrossGain={totalGrossGain} totalLiquidGain={totalLiquidGain} totalSpent={totalSpent} />
