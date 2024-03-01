@@ -22,7 +22,7 @@ const Index = (props) => {
         const finalKm = parseFloat(finalKmRef.current.value);
         const grossGain = parseFloat(grossGainRef.current.value).toFixed(2);
 
-        // Validação básica - você pode adicionar mais validações conforme necessário
+        // Basic validation
         if (!date || isNaN(initialKm) || isNaN(finalKm) || isNaN(grossGain)) {
             alert("Por favor, preencha todos os campos corretamente.");
             return;
