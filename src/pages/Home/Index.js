@@ -112,10 +112,10 @@ const Index = () => {
 
   return (
     <div>
-      <h1>Salário: {salaryGoal}</h1>
-      <h1>Meta 1: {secondGoal}</h1>
-      <h1>Meta 2: {thirdGoal}</h1>
-      <h1>Restante: {remaining}</h1>
+      <h1>Salário: R$ {parseFloat(salaryGoal).toFixed(2).replace('.', ',')}</h1>
+      <h1>Meta 1: R$ {parseFloat(secondGoal).toFixed(2).replace('.', ',')}</h1>
+      <h1>Meta 2: R$ {parseFloat(thirdGoal).toFixed(2).replace('.', ',')}</h1>
+      <h1>Restante: R$ {parseFloat(remaining).toFixed(2).replace('.', ',')}</h1>
       <Form addInput={addInput} />
       <Table tableData={tableData} totalGrossGain={totalGrossGain} totalLiquidGain={totalLiquidGain} totalSpent={totalSpent} />
     </div>
